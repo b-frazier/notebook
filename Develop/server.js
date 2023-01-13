@@ -15,5 +15,5 @@ app.get('/notes', (req, res) =>
 );
 
 app.listen(PORT, () =>
-    console.log(`Example app listening at http://localhost:${PORT}`)
+    console.log(`View at http://localhost:${PORT}`)
 );
