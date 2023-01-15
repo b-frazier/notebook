@@ -4,7 +4,7 @@ const uniqid = require('uniqid');
 
 module.exports = (app) => {
     app.get('/api/notes', (req, res) => {
-        res.sendFile(path.join(__dirname, './db/db.json'))
+        res.sendFile(path.join(__dirname, '../db/db.json'))
     });
     
     // post new note to database file
@@ -22,7 +22,7 @@ module.exports = (app) => {
             };
     
             // read the file, add new note object
-            const oldNotes = fs.readFileSync(`./db/db.json`);
+            const oldNotes = fs.readFileSync(`../db/db.json`);
             const notes = JSON.parse(oldNotes);
             notes.push(newNote)
     
@@ -30,7 +30,7 @@ module.exports = (app) => {
             const noteString = JSON.stringify(notes, null, 2);
     
             // write the string to the database file
-            fs.writeFile(`./db/db.json`, noteString, (err) => 
+            fs.writeFile(`../db/db.json`, noteString, (err) => 
                 err ? console.error(err) : console.log(`New note ${newNote.title} added to file.`)
             );
     
