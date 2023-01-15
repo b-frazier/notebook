@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs')
-const db = require('./db/db.json');
+const uniqid = require('uniqid');
 
 const app = express();
 const PORT = 3001;
@@ -20,7 +20,7 @@ app.get('/notes', (req, res) =>
 );
 
 // post new note to database file
-app.post('/notes', (req, res) => {
+app.post('/api/notes', (req, res) => {
     
     // items that will be in the body of the object
     const { title, text } = req.body;
@@ -29,7 +29,8 @@ app.post('/notes', (req, res) => {
         // variable to save the object
         const newNote = {
             title,
-            text
+            text,
+            id: uniqid()
         };
 
         // read the file, add new note object
