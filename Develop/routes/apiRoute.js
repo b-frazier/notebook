@@ -46,4 +46,14 @@ module.exports = (app) => {
         }
     });
 
+    app.delete(`/api/notes/:id`, (req, res) => {
+        let oldNotes = fs.readFileSync(`db/db.json`);
+        let notes = JSON.parse(oldNotes);
+        
+        let removeNote = notes.filter(({ id }) => id !== req.params.id);
+
+        fs.writeFileSync('db/db.json', JSON.stringify(removeNote))
+        res.json(removeNote)
+        console.log(removeNote)
+    });
 }
