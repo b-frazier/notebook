@@ -22,15 +22,15 @@ module.exports = (app) => {
             };
     
             // read the file, add new note object
-            const oldNotes = fs.readFileSync(`../db/db.json`);
-            const notes = JSON.parse(oldNotes);
+            let oldNotes = fs.readFileSync(`db/db.json`);
+            let notes = JSON.parse(oldNotes);
             notes.push(newNote)
     
             // convert the data to a string so it can be saved
-            const noteString = JSON.stringify(notes, null, 2);
+            let noteString = JSON.stringify(notes, null, 2);
     
             // write the string to the database file
-            fs.writeFile(`../db/db.json`, noteString, (err) => 
+            fs.writeFile(`db/db.json`, noteString, (err) => 
                 err ? console.error(err) : console.log(`New note ${newNote.title} added to file.`)
             );
     
