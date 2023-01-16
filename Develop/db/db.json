@@ -1,6 +1,27 @@
 [
-    {
-        "title":"Test Title",
-        "text":"Test text"
-    }
+  {
+    "title": "fixing issues",
+    "text": "the old notes won't display!",
+    "id": "sktwi7htlcxs16n1"
+  },
+  {
+    "title": "how do servers work",
+    "text": "i dont know homie",
+    "id": "sktwi7sllcxsx4wc"
+  },
+  {
+    "title": "5th note",
+    "text": "still dont know how to delete but almost there maybe",
+    "id": "sktwi9qdlcz3n521"
+  },
+  {
+    "title": "trying again",
+    "text": "i think i just need to rewrite the file\n",
+    "id": "sktwi9uolcz3spdr"
+  },
+  {
+    "title": "I DID IT",
+    "text": "this is great! i can add and delete the notes!",
+    "id": "sktwiaaelczavvd6"
+  }
 ]
