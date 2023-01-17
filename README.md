@@ -15,7 +15,12 @@
   None
 
   ## Usage
-  This application should be used to take notes, save them, then access them at a later date.
+  This application should be used to take notes, save them, then access them at a later date.<br>
+  https://fierce-fjord-39861.herokuapp.com/
+
+  ## Screenshots
+  <img src="./public/assets/images/homepage.png" width="300">
+  <img src="./public/assets/images/notes-page.png" width="300">
 
   ## License
   MIT ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)<br>
